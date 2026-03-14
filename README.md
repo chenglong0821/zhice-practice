@@ -1,73 +1,93 @@
-# React + TypeScript + Vite
+# 职测刷题 - 事业编制考试学习辅助软件
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一款专为事业编制考试（职业能力倾向测验）设计的刷题学习应用。
 
-Currently, two official plugins are available:
+## 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. 智能刷题
+- **按模块刷题**：支持言语、判断、数量、资料、常识五大模块
+- **模拟考试**：随机抽取100道题目进行全真模拟
+- **答案解析**：每道题都配有详细解析
 
-## React Compiler
+### 2. 错题本
+- 自动收录做错的题目
+- 支持按模块筛选
+- 标记已掌握/待复习状态
+- 错题复习功能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. 学习统计
+- 每日学习时长记录
+- 各模块正确率统计
+- 连续学习天数追踪
+- 考试历史记录
 
-## Expanding the ESLint configuration
+### 4. 知识点背诵
+- 判断推理：图形推理规律、逻辑判断公式
+- 数量关系：工程问题、行程问题、容斥问题公式
+- 资料分析：增长率、比重、平均数公式
+- 言语理解：行文脉络法、逻辑填空技巧
+- 常识判断：宪法重点、民法典亮点
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 技术栈
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **前端框架**: React 18 + TypeScript
+- **UI 组件库**: Tailwind CSS 4
+- **状态管理**: Zustand (持久化存储)
+- **路由**: React Router DOM
+- **打包工具**: Vite 8
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 项目结构
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── types/question.ts          # 数据类型定义
+├── stores/                    # Zustand 状态管理
+│   ├── useUserProgressStore.ts   # 用户进度、统计
+│   └── useWrongBookStore.ts      # 错题本
+├── data/questions/           # 题库数据
+├── pages/
+│   ├── Home.tsx              # 首页
+│   ├── Practice/             # 刷题模块
+│   │   ├── ModulePractice.tsx   # 按模块刷题
+│   │   └── ExamPractice.tsx    # 模拟考试
+│   ├── WrongBook/WrongBook.tsx  # 错题本
+│   ├── Statistics/Statistics.tsx # 学习统计
+│   └── Notes/KnowledgePoints.tsx # 知识点
+└── layouts/MainLayout.tsx    # 主布局
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 运行方式
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# 安装依赖
+npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
 ```
+
+## 数据存储
+
+所有数据存储在浏览器 localStorage 中，包括：
+- 用户学习进度
+- 错题记录
+- 每日学习统计
+- 考试历史
+
+## 题库说明
+
+当前题库包含约 45 道基础题目，涵盖：
+- 判断推理：15 道
+- 数量关系：10 道
+- 言语理解：8 道
+- 资料分析：5 道
+- 常识判断：7 道
+
+可根据需要扩展题库内容。
+
+## License
+
+MIT
