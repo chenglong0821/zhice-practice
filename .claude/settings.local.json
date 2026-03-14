@@ -16,7 +16,14 @@
       "Bash(curl -sI \"https://chenglong0821.github.io/zhice-practice/zhice-practice/assets/index-DANywcZP.js\" | head -5)",
       "Bash(curl -sI \"https://chenglong0821.github.io/zhice-practice/assets/index-DANywcZP.js\" | head -5)",
       "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/\" | grep -o 'src=\"[^\"]*\"' | head -3)",
-      "Bash(rm -rf .git && git init && git add -A && git commit -m \"deploy\" && git remote add origin https://github.com/chenglong0821/zhice-practice.git && git push origin HEAD:gh-pages -f 2>&1)"
+      "Bash(rm -rf .git && git init && git add -A && git commit -m \"deploy\" && git remote add origin https://github.com/chenglong0821/zhice-practice.git && git push origin HEAD:gh-pages -f 2>&1)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/\" | grep -o '知识点' | head -3)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/\")",
+      "Bash(curl -sI \"https://chenglong0821.github.io/zhice-practice/\" | grep -i \"last-modified\")",
+      "Bash(gh api:*)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/assets/index-Cv-iLjXW.js\" | grep -o \"知识点\" | head -3)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/assets/index-DL_qILTN.js\" | grep -o \"综应\" | head -3)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/assets/index-DL_qILTN.js\" | grep -o \"思维导图\" | head -1)"
     ]
   }
 }
