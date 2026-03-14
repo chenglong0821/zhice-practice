@@ -6,6 +6,8 @@ import ExamPractice from './pages/Practice/ExamPractice';
 import WrongBook from './pages/WrongBook/WrongBook';
 import Statistics from './pages/Statistics/Statistics';
 import KnowledgePoints from './pages/Notes/KnowledgePoints';
+import ComprehensiveContent from './pages/Notes/ComprehensiveContent';
+import ExamMindMap from './pages/Notes/ExamMindMap';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="wrongbook" element={<WrongBook />} />
         <Route path="statistics" element={<Statistics />} />
         <Route path="notes" element={<KnowledgePoints />} />
+        <Route path="notes/comprehensive" element={<ComprehensiveContent />} />
+        <Route path="notes/mindmap" element={<ExamMindMap />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Route>
     </Routes>

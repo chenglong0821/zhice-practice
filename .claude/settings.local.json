@@ -4,7 +4,19 @@
       "Bash(npm run:*)",
       "Bash(npm install:*)",
       "Bash(git ls-tree:*)",
-      "Bash(git fetch:*)"
+      "Bash(git fetch:*)",
+      "Bash(curl -s https://chenglong0821.github.io/zhice-practice/ | head -20)",
+      "Bash(curl -sI https://chenglong0821.github.io/zhice-practice/assets/index-Cy3It50e.js | head -5)",
+      "Bash(curl -s https://chenglong0821.github.io/zhice-practice/ | head -15)",
+      "Bash(curl -sI https://chenglong0821.github.io/zhice-practice/ | head -10)",
+      "Bash(curl -sI https://chenglong0821.github.io/zhice-practice/zhice-practice/assets/index-DANywcZP.js | head -5)",
+      "Bash(touch .nojekyll && git add . && git commit --amend -m \"deploy\" && git push origin HEAD:gh-pages -f 2>&1)",
+      "Bash(sleep 3 && curl -sI \"https://chenglong0821.github.io/zhice-practice/\" 2>&1 | grep -i \"last-modified\")",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/\" | head -15)",
+      "Bash(curl -sI \"https://chenglong0821.github.io/zhice-practice/zhice-practice/assets/index-DANywcZP.js\" | head -5)",
+      "Bash(curl -sI \"https://chenglong0821.github.io/zhice-practice/assets/index-DANywcZP.js\" | head -5)",
+      "Bash(curl -s \"https://chenglong0821.github.io/zhice-practice/\" | grep -o 'src=\"[^\"]*\"' | head -3)",
+      "Bash(rm -rf .git && git init && git add -A && git commit -m \"deploy\" && git remote add origin https://github.com/chenglong0821/zhice-practice.git && git push origin HEAD:gh-pages -f 2>&1)"
     ]
   }
 }
